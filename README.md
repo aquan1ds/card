@@ -1,98 +1,229 @@
-# DevChallenges.io - Minimal Blog Card
+# Blog Website - Next.js 15
 
-![Thumbnail for the Minimal Blog Card coding challenge](./thumbnail.jpg)
+Website blog hiện đại được xây dựng với Next.js 15, TypeScript và Tailwind CSS. Dự án được tối ưu hóa cho hiệu suất và SEO với hỗ trợ Server-Side Rendering (SSR) và Static Site Generation (SSG).
 
-## Welcome! 👋
+## 🚀 Tính năng chính
 
-Welcome to this responsive web coding challenge.
+### Frontend
+- **Modern UI**: Giao diện đẹp và responsive với Tailwind CSS
+- **SEO Optimized**: Tối ưu SEO với metadata, structured data và sitemap
+- **Performance**: Tối ưu hiệu suất với Next.js Image, lazy loading
+- **TypeScript**: Type safety cho toàn bộ dự án
+- **Server Components**: Sử dụng React Server Components mới nhất
 
-[devChallenges.io](https://devchallenges.io/) challenges are designed to help you enhance your coding skills by building realistic projects.
+### Tính năng Blog
+- ✅ Trang chủ với banner slider và danh sách bài viết
+- ✅ Trang chi tiết bài viết với breadcrumb và sharing
+- ✅ Sidebar với bài viết phổ biến, danh mục, tag cloud
+- ✅ Responsive design cho mọi thiết bị
+- ✅ Tích hợp social media sharing
+- ✅ Structured data cho Google (JSON-LD)
+- ✅ Sitemap và robots.txt tự động
 
-**Suggested Skills to practice: HTML and CSS**
+### SEO & Performance
+- ✅ Open Graph và Twitter Card metadata
+- ✅ Canonical URLs
+- ✅ Image optimization với Next.js Image
+- ✅ Automatic sitemap generation
+- ✅ Google-friendly structured data
+- ✅ Lazy loading và code splitting
 
-## The challenge
+## 🛠️ Công nghệ sử dụng
 
-Your task is to create a web page that closely resembles the provided design.
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Date Formatting**: date-fns
+- **Build Tool**: Next.js built-in
+- **Deployment**: Vercel Ready
 
-You can use any tools or resources you like to complete this challenge. Each challenge is designed to practice different skills, so be sure to check the challenge description for more information.
+## 📦 Cài đặt và chạy dự án
 
-If you need help or have any questions, feel free to [join our community](https://github.com/orgs/devchallenges-io/discussions) and ask for support.
+### Yêu cầu hệ thống
+- Node.js 18.17 trở lên
+- npm hoặc yarn
 
-## Where to find everything
+### Cài đặt
+```bash
+# Clone repository
+git clone <your-repo-url>
+cd blog-nextjs
 
-Your goal is to build the project using the provided design. You can find the designs in the challenge editor once you start the challenge or in the `/design` folder. Please note that the `/design` folder may not include all the designs you need, so be sure to check the editor for more details.
+# Cài đặt dependencies
+npm install
 
-The designs are in JPG format, so you'll need to use your best judgment for styles such as `font-size`, `padding`, and `margin`. Additionally, spacing guides are available for each challenge, but access to them requires a [Pro membership](https://devchallenges.io/pro). With a Pro membership, you can also download the Figma design files.
+# Chạy development server
+npm run dev
+```
 
-All the required assets can be found in the `/resources` folder. You may need to optimize the assets as necessary.
+Mở [http://localhost:3000](http://localhost:3000) để xem website.
 
-For more information about the challenge, access the challenge editor on [devChallenges.io](https://devchallenges.io/challenges-dashboard).
+### Scripts có sẵn
 
-## Steps to Complete the Challenge on devChallenges.io
+```bash
+# Development
+npm run dev          # Chạy development server
 
-- [ ] Start by visiting [devChallenges.io](https://devchallenges.io/), navigate to the challenge page, and begin the challenge.
-- [ ] Once you have started the challenge, you will have access to the editor where you can download the necessary resources, check colors, fonts, and more.
-- [ ] Download the starter/resources, and if you are a Pro user, you can also download the Figma file.
-- [ ] Initialize the project as a Git repository.
-- [ ] Review the design and analyze the different versions for desktop, tablet, and mobile.
-- [ ] Plan your approach to the project by identifying reusable CSS classes and structuring your HTML content.
-- [ ] Define the base styles for your project, including font-family, font-size, and other general content styles.
-- [ ] Begin adding styles from the top of the page and work your way down, ensuring that each section is visually appealing and matches the provided design.
-- [ ] Optimize and resize the required assets from the `/images` folder as necessary.
-- [ ] Test your project's responsiveness by previewing it on different devices and screen sizes.
-- [ ] Once you are satisfied with your implementation, deploy your project to a hosting platform such as GitHub Pages, Vercel, or Netlify.
-- [ ] Submit your solution on devchallenges.io and aim to pass the design comparison and performance tests.
-- [ ] Replace the default `README.md` file with a custom one that explains your project and reflects on your learning experience. You can use the provided `README-template.md` as a starting point.
-- [ ] Share your solution with the devChallenges.io community by tweeting [@devchallengesio](https://twitter.com/devchallengesio) and mentioning the repository and live URLs in your tweet. You can also share your solution on other social channels or write a blog post about your experience.
-- [ ] Seek feedback from the community by using the provided templates or asking specific questions about your implementation.
+# Production
+npm run build        # Build production
+npm run start        # Chạy production server
 
-Good luck and enjoy building your project! 🚀
+# Utilities
+npm run lint         # Kiểm tra code quality
+```
 
-## Deploying your project
+## 📁 Cấu trúc thư mục
 
-Our recommended hosting options include:
+```
+src/
+├── app/                    # App Router (Next.js 15)
+│   ├── article/[slug]/     # Dynamic article pages
+│   ├── globals.css         # Global styles
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx           # Home page
+│   ├── robots.ts          # Robots.txt generation
+│   └── sitemap.ts         # Sitemap generation
+├── components/            # Shared components
+├── lib/                   # Utilities và data
+│   └── data.ts           # Mock data
+├── types/                 # TypeScript types
+│   └── blog.ts           # Blog-related types
+public/                    # Static assets
+├── images/               # Images
+└── favicon.ico           # Favicon
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## 🎨 Customization
 
-You can choose any of these solutions or explore other trusted providers. For more information, please refer to our guide on [free hosting platforms](https://devchallenges.io/learn/1-fundamentals/free-hosting-for-web-projects).
+### Thay đổi màu sắc chủ đạo
+Cập nhật `tailwind.config.ts`:
 
-## Create your own `README.md`
+```typescript
+colors: {
+  primary: {
+    50: '#eff6ff',
+    500: '#3b82f6',  // Màu chính
+    600: '#2563eb',
+    700: '#1d4ed8',
+  }
+}
+```
 
-To use the Readme template, follow these steps:
+### Thay đổi font
+Cập nhật `src/app/layout.tsx`:
 
-1. Open the `README-template.md` file in your text editor.
-2. Replace the placeholder content with your own project information.
-3. Customize the sections and headings to fit your project's needs.
-4. Add a detailed description of your project, including its purpose and features.
-5. Reflect on your learning experience and any challenges you encountered during development.
-6. Delete the original `README.md` file.
-7. Rename the `README-template.md` file to `README.md`.
-8. Save the changes and commit the updated `README.md` file to your repository.
+```typescript
+import { Inter } from "next/font/google";
 
-By following these instructions, you can create a customized `README.md` file that effectively communicates your project to others.
+const inter = Inter({ 
+  subsets: ["latin", "vietnamese"],
+  display: 'swap',
+});
+```
 
-## More guides
+### Thêm data thực
+1. Thay thế mock data trong `src/lib/data.ts`
+2. Kết nối với CMS hoặc database
+3. Cập nhật TypeScript types trong `src/types/blog.ts`
 
-Don't forget to check out the [devChallenges Curriculum](https://devchallenges.io/learn), which covers basic to advanced topics that are essential for your web development journey.
+## 🚀 Deployment
 
-## Sharing your solution
+### Vercel (Recommended)
+1. Push code lên GitHub
+2. Kết nối repository với Vercel
+3. Deploy tự động
 
-There are several platforms where you can share your solution:
+### Manual Deployment
+```bash
+# Build project
+npm run build
 
-1.  Tweet [@devchallengesio](https://x.com/devchallengesio) and mention **@devchallengesio**, including the repository and live URLs in your tweet. We would love to see what you have built and help spread the word.
-2.  Share your solution on other social channels such as LinkedIn and tag [devchallenges](https://www.linkedin.com/company/devchallenges).
-3.  Write a blog post about your experience building the project. Documenting your workflow, technical choices, and explaining your code is an excellent way to reinforce your learning. Popular platforms for writing include [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+# Start production server
+npm run start
+```
 
-We provide templates to help you share your solution once you have submitted it on the platform. Feel free to edit them and include specific questions when seeking feedback.
+## 📊 SEO Features
 
-The more specific your questions are, the more likely it is that another community member will provide feedback.
+### Metadata tự động
+- Title và description cho mỗi trang
+- Open Graph tags cho social sharing
+- Twitter Card metadata
+- Canonical URLs
 
-## Feedback
+### Structured Data
+- Article schema cho bài viết
+- Organization schema cho website
+- Breadcrumb schema
 
-We value feedback and are always looking to improve our challenges and platform. If you have any suggestions or comments, please email us at hi\[at]devchallenges\[dot]io.
+### Sitemap
+- Tự động generate sitemap.xml
+- Include tất cả articles và categories
+- Update timestamp tự động
 
-This challenge is completely free. Please share it with anyone who would find it useful for practice.
+## 🔧 Configuration
 
-**Enjoy building!** 🚀
+### Environment Variables
+Tạo file `.env.local`:
+
+```env
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_SITE_NAME=Blog Website
+
+# Analytics (optional)
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+
+# Database (for future)
+DATABASE_URL=your-database-url
+```
+
+### Next.js Config
+Cấu hình trong `next.config.ts`:
+- Image optimization
+- Security headers
+- Compression
+- Remote patterns cho images
+
+## 📱 Responsive Design
+
+Website hoạt động tốt trên:
+- Desktop (1024px+)
+- Tablet (768px - 1023px)
+- Mobile (< 768px)
+
+## 🔍 SEO Checklist
+
+- ✅ Meta tags đầy đủ
+- ✅ Open Graph và Twitter Cards
+- ✅ Structured data (JSON-LD)
+- ✅ Sitemap.xml
+- ✅ Robots.txt
+- ✅ Canonical URLs
+- ✅ Image alt tags
+- ✅ Semantic HTML
+- ✅ Page speed optimization
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Tạo Pull Request
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 📞 Contact
+
+- Website: [https://yourdomain.com](https://yourdomain.com)
+- Email: contact@yourdomain.com
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework  
+- [Lucide React](https://lucide.dev/) - Icon library
+- [Unsplash](https://unsplash.com/) - Stock photos
